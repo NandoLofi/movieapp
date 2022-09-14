@@ -1,7 +1,10 @@
 from json import load
+from sys import api_version
 from django.shortcuts import render
 import requests
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # Create your views here.
@@ -13,3 +16,6 @@ def search(request):
 
 
     return render(request, 'search.html')
+
+
+print(os.getenv('APIKEY'))
